@@ -1,0 +1,19 @@
+name: vooy-gallery
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: gallery
+      POSTGRES_USER: gallery
+      POSTGRES_PASSWORD: gallery
+    ports:
+      - "127.0.0.1:54329:5432"
+    volumes:
+      - gallery_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gallery -d gallery"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+volumes:
+  gallery_postgres:

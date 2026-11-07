@@ -1,0 +1,23 @@
+[
+  {
+    "case_id": "test-06",
+    "original_query": "난간 장식이 있는 커다란 실내 계단에 앉아 있는 사진 찾아줘.",
+    "corrected_query": "난간 장식이 있는 커다란 계단에 앉아 있는 사진 찾아줘.",
+    "reason": "원본 사진에서 실내 여부를 확정할 수 없어 실내 조건을 제거함",
+    "basis": "Full original image re-inspection after baseline evaluation; model and prompts unchanged"
+  },
+  {
+    "case_id": "test-13",
+    "original_query": "2026년 9월 제주 사진 중 배의 창가에서 바다 노을을 바라보는 사람의 실루엣 찾아줘.",
+    "corrected_query": "2026년 9월 제주 사진 중 배에서 바다 노을을 바라보는 사람의 실루엣 찾아줘.",
+    "reason": "원본은 열린 선측 공간과 차양이 보이며 창가로 단정하기 어려워 창가 조건을 제거함",
+    "basis": "Full original image re-inspection after baseline evaluation; model and prompts unchanged"
+  },
+  {
+    "case_id": "test-22",
+    "original_query": "2026년 9월 서울에서 마스크와 멜빵바지를 착용하고 야외 나무 난간 앞에 서 있는 사진 찾아줘.",
+    "corrected_query": "2026년 9월 서울에서 흰 티셔츠와 마스크를 착용하고 배낭을 멘 채 야외 난간 앞에 서 있는 사진 찾아줘.",
+    "reason": "원본의 배낭 끈과 허리에 묶은 옷을 멜빵바지로 오인했고 갈색 금속 난간을 나무로 오인한 라벨을 수정함",
+    "basis": "Full original image re-inspection after baseline evaluation; model and prompts unchanged"
+  }
+]
